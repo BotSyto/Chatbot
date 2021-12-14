@@ -20,8 +20,8 @@ all_words = data["all_words"]
 tags = data["tags"]
 model_state = data["model_state"]
 
-model = Net(input_size, hidden_size, output_size).to(device)
-model.load_state_dict(model_state)
+model = Net(input_size, hidden_size, output_size)
+model.load_state_dict(model_state).to(device)
 model.eval()
 
 dataProcess = DataProcess()
